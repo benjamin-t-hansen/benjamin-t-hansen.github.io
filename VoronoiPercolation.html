@@ -1,0 +1,465 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  
+<!-- Mirrored from myweb.students.wwu.edu/hansenb7/VoronoiPercolation.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 05 Oct 2016 18:22:34 GMT -->
+<head>
+    <meta charset="utf-8">
+    <title>Bootstrap Voronoi Percolation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="B.T. Hansen">
+
+    <!-- Le styles -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="assets/css/docs.css" rel="stylesheet">
+    <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="assets/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+                    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+                                   <link rel="shortcut icon" href="assets/ico/favicon.html">
+
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-42445786-1']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+
+    <!-- MathJax Latex Output-->
+    <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+</script>
+<script type="text/javascript"
+  src="../../cdn.mathjax.org/mathjax/latest/MathJaxdda6.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+  </head>
+
+  <body data-spy="scroll" data-target=".bs-docs-sidebar">
+
+
+  <!-- Navbar
+    ================================================== -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="index.html">B.T.Hansen</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="">
+                <a href="index.html">Home</a>
+              </li>
+              <!--<li class="">
+                <a href="./mathematica.html">Mathematica</a>
+              </li>
+               <li class="">
+                <a href="./resume.html">R&eacute;sum&eacute;</a>
+              </li>  -->
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Math<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="math.html">Background</a></li>
+                  <li class="divider"></li>
+                  <li><a href="percolation.html">Percolation</a></li>
+                  <li><a href="VoronoiPercolation.html">Bootstrap Voronoi Percolation</a></li>
+      <li><a href="matching.html">Stable Matching</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Economics<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="economics.html">Main</a></li>
+                  <li class="divider"></li>
+                  <li><a href="ukraine.html">Ukraine</a></li>
+                </ul>
+              </li>              
+              <li class="">
+                <a href="CV1.pdf">CV</a>
+              </li>
+              <li class="">
+                <a href="https://docs.google.com/forms/d/15SjT2ocE26EqxPREDsI_vGfgBDnnNFxeUl9m103nXXc/viewform">Comment</a>
+              </li>
+              <li class="">
+                <a href="https://www.linkedin.com/in/bhansen">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!-- Subhead
+================================================== -->
+<header class="jumbotron subhead" id="overview">
+  <div class="container">
+    <h2>Bootstrap Voronoi Percolation</h2>
+    <p class="lead">Bootstrap Percolation in a Continuous Setting.</p>
+  </div>
+</header>
+
+
+  <div class="container">
+
+    <!-- Docs nav
+    ================================================== -->
+    <div class="row">
+      <div class="span3 bs-docs-sidebar">
+        <ul class="nav nav-list bs-docs-sidenav">
+          <li><a href="#overview"><i class="icon-chevron-right"></i>Overview</a></li>
+          <li><a href="#Voronoi-Percolation"><i class="icon-chevron-right"></i>Voronoi Percolation </a></li>
+          <li><a href="#Bootstrap-Percolation"><i class="icon-chevron-right"></i>Bootstrap Percolation</a></li>
+          <li><a href="#Bootstrap-Voronoi-Percolation"><i class="icon-chevron-right"></i>Bootstrap Voronoi Percolation</a></li>
+          <li><a href="#Simulations"><i class="icon-chevron-right"></i>Simulations</a></li>
+          <li><a href="#Code"><i class="icon-chevron-right"></i>Code</a></li>
+        </ul>
+      </div>
+      <div class="span9">
+
+
+
+        <!-- Overview
+        ================================================== -->
+        <section id="overview">
+          <div class="page-header">
+            <h2>Overview</h2>
+          </div>
+          <p>My goal is to translate the bootstrap percolation model from the discrete to a continuous setting. Below I propose a global cascade model (infection model) for a Voronoi diagram in the plane.  I have yet to establish bounds on critical behavior of this model, but I have ran several simulations in hopes of understanding its behavior better.  This model has a marked difference from the bootstrap percolation model:  There will always be pockets of cells that never become infected for any initial infection rate less than one. </p>
+
+
+        </section>
+
+
+
+        <!-- Defintions/Boundary
+        ================================================== -->
+        <section id="Voronoi-Percolation">
+          <div class="page-header">
+            <h2>Voronoi Percolation</h2>
+          </div>
+          <p>First, what is a <a href="https://en.wikipedia.org/wiki/Voronoi_diagram">Voronoi diagram</a>?  We randomly place seeds in the plane and then every point in the plane is assigned to the cell of the seed closest to it.  It looks something like this (from <a href="http://60degrees-southlight.blogspot.com/2010/09/research-voronoi-diagram-studies.html">Southlight</a>):</p>
+          <p><img src="img/VoronoiDiagram2.gif" alt="" width="400" height="400"> </p>
+          <p>Now what if we color the cells of this diagram with two colors?  We go to each cell, independently, and color the cell green with some probability $p$.  We call this a Voronoi Percolation process in the plane with probability $p$. If we choose $p$ to be close enough to one, we should be able to start at some cell and continue walking on only unvisited green cells forever.  The question is, what is the smallest $p$ for which this holds?  This is the percolation threshold.</p>
+          
+          
+          <p>The percolation threshold was proved to be <a href="http://arxiv.org/pdf/math/0410336v2.pdf">1/2!</a></p>
+          <p>If we color the above diagram green with probability 1/2</p>
+          <p><img src="img/VoronoiDiagram3.gif" alt="" width="400" height="400"> </p>     
+
+        </section>
+
+
+
+
+
+        <!-- Hypercubes and Up-Sets
+        ================================================== -->
+ <section id="Bootstrap-Percolation">
+          <div class="page-header">
+            <h2>Bootstrap Percolation</h2>
+          </div>
+           <p>Bootstrap percolation has been explored in the square grid.  This is where we initially infect cells with some probability $p$ and then infect a square if at least two of its neighbors (sharing an edge) are infected.
+           
+ </p>
+            <p>From <a href="http://mathworld.wolfram.com/BootstrapPercolation.html">MathWorld</a>,      
+ </p>
+ 
+ 
+  			<p>       <img src="http://mathworld.wolfram.com/images/gifs/bootperc.gif" class="center-image" width="455" height="144" alt="Bootstrap percolation for three different starting densities">
+ </p>
+ 
+ 
+ <p>Below, I outline a model which combines these two models.</p>
+        </section>
+          
+        <!-- Proof Of Bounds
+        ================================================== -->
+        <section id="Bootstrap-Voronoi-Percolation">
+          <div class="page-header">
+            <h2>Bootstrap Voronoi Percolation</h2>
+          </div>
+          <p> With probability $p$, create a Voronoi Percolation process in the plane with colors white and green at time zero (coloring each cell independently green with probability $p$). At time $t=1$, for all white cells, if a white cell has at least as many green neighbors as white neighbors, we color the white cell green.  We repeat this recoloring again for our new coloring, and so on as time goes to infinity.  We define the coloring at $t-\infty$ for a cell to be green if for some finite $t$ the color of that cell is green and white if else.   We say this model percolates if at $t-\infty$ there exists a path of green cells for which we can walk along forever.  For what minimal choice of $p$, does this model percolate at $t-\infty$ with certainty? 
+</p>
+
+		<p>Approaching this problem has been challenging.  At this point, I am not aware of any approaches for establishing bounds on $p$ beyond $0\leq p\leq 1/2.$  (When $p\geq1/2$ then the model percolates before the infection begins.)</p>
+		
+        <p><b>A Potential Method for an Upper Bound:</b> Freeze the infection after a fixed number of steps (rather than letting $t$ continue off to infinity) and see if the model percolates.  For starters try $t=1$.  While after one step over half the cells may be infected, this is not sufficient for concluding percolation occurs&mdash;the infected sites are no longer colored independently as in the Voronoi Percolation process. </p>
+        
+          <p><b>Potential Method for the Lower Bound:</b>  Make the model more infectious, rather than infecting a cell if at least half of its neighbors are infected, infect a cell if a fixed number of neighbors are infected.
+ </p>
+          <p>If we infect a cell if one of its neighbors is infected, then infecting one cell is sufficient to infect the whole plane (which isn't that interesting).
+ </p>          
+           <p>We are guaranteed every cell will have a least 3 neighbors, so we can infect a cell if two of its neighbors are infected.  Unfortunately, this will also lead to the entire plan being infected if we start with two infected sites next to each other.  (Think about why!)
+ </p>  
+           <p>What if we infect under two conditions: if 3 of its neighbors are infected OR infect if 2 of its neighbors are infected for cells with less than 6 neighbors  (we require this condition to ensure our model is more infectious than our original model).  This model seems more promising since the average number of neighbors is 6.
+ </p>   
+ 
+           <p><b>Things We Know:</b> We know that before infection begins every green cluster must be finite in size and there exists a "boundary" of non-infected cells around our cluster.  Further, if the cluster is finite after the infection runs its course, then in addition to the new "boundary" around the cluster being non-infected (by definition), the neighbors of boundary cells must have a low infection rate. Further, it seem that if a cell on the exterior of the boundary is infected, then it likely was infected initially, not infected through the process. 
+ </p>
+     
+           <p><b>Difference Between Bootstrap Percolation (on $\mathbb{Z}^2$) and Bootstrap Voronoi Percolation:</b>   There will always be pockets of cells in the Bootstrap Voronoi Percolation that never become infected for any initial infection rate less than one. Why is this? There will always exist small regions where the vertices making up the boundary have more neighbors within the region then leaving the region.  Thus if our region is of size n, and p&lt;1, then regardless what happens outside the region, the region will never be completely active with probability greater than $(1-p)^n$.  Since there are an infinite number of regions with this property, we can be certain that at least one of them will never be active.    In the Bootstrap Percolation model on the plane, the entire plane will be covered for any positive probability of initial infection.
+
+ </p>           
+        </section>
+        
+        <!-- Hypercubes and Up-Sets
+        ================================================== -->
+        <section id="Simulations">
+          <div class="page-header">
+            <h2>Simulations</h2>
+          </div>
+          <p>Now we turn to simulations to see if they provide any insight. Continuous regions are difficult to compute so we turn to <a href="https://en.wikipedia.org/wiki/Delaunay_triangulation">Delaunay Triangulation</a>.  This triangulation creates a graph where Vertices are the cells of the Voronoi  model and two Vertices are connected if their respective cells where neighbors (this triangulation is unique).  We infect a vertex if at least half of its neighbors are infected.</p>
+          
+          <p>From <a href="http://mathworld.wolfram.com/DelaunayTriangulation.html">MathWorld</a>,</p>
+          <img width="464" height="193" src="http://mathworld.wolfram.com/images/eps-gif/DelaunayTriangulation_1000.gif" class="center-image" alt="DelaunayTriangulation">
+          
+          
+           <p>The following simulation is done on the unit grid with a periodic border (torus) with 2,000 points.  Points are placed uniform randomly and infected with probability .3.
+ </p>
+ 				<p><img src="img/boot.gif" alt="" width="600" height="600"> </p>
+ 
+ 
+          <p>As you can see every site ends up becoming infected after 11 steps.  This suggests the critical value is less than .3.
+ </p>
+ 
+            <p>What we can consider is the proportion of infected vertices once the model freezes for different values of p for the initial infection.  Below are the graphs of three models with 2,000 vertices and one with 10,000 vertices.
+ </p>
+ 			<p><img src="img/proportionfilledin.png" alt="" width="700" height="700"> </p>
+ 
+            <p>As you can see, the number of vertices grows first linearly as $p$ increases and then increases rapidly.
+
+ </p>
+ 
+            <p>We can also consider the proportion of infected vertices in the largest component when the model freezes.  For that we crank it up a notch:  Two models with 10,000 Vertices and one with 50,000 vertices.
+ </p>
+ 
+  			<p><img src="img/giantcomponent1.png" alt="" width="700" height="700"> </p>
+ 
+            <p>Once again we have quite the transition.  Below is the code.  Please comment above if you have any questions or remarks!
+ </p>
+
+          
+        </section>
+
+
+
+        <!-- Harris' s Lemma
+        ================================================== -->
+        <section id="Code">
+          <div class="page-header">
+            <h2>Code</h2>
+          </div>
+          <p>All of the models were created in Python.  I used Excel to graph the values.  This code is clearly not optimized but hopefully highlights some of my methods. <a href="http://www.scipy.org/">Scipy</a> and <a href="https://networkx.github.io/">NetworkX</a> were hugely helpful in writing these programs. </p>
+          <h3>Code Needed for All Simulations</h3>
+          <p><pre class="prettyprint linenums">
+import numpy as np
+import matplotlib.pyplot as plt
+
+from scipy.spatial import Delaunay
+
+x=2000 #number of sites
+
+bcolor=np.random.rand(x) #assigns each site a value between zero and one to be colored
+
+def periodtri(x) :
+    points = np.random.rand(x, 2) #randomly places points in 2D
+    points1=np.add(points,np.array([1, 0])) #repeats tiling to obtain periodic condition
+    points2=np.add(points,np.array([1, 1]))
+    points3=np.add(points,np.array([0, 1]))
+    points4=np.add(points,np.array([-1, 1]))
+    points5=np.add(points,np.array([-1, 0]))
+    points6=np.add(points,np.array([-1, -1]))
+    points7=np.add(points,np.array([0, -1]))
+    points8=np.add(points,np.array([1, -1]))
+    allpoints=np.concatenate((points,points1,points2,points3,points4,points5,points6,points7,points8))
+    tri = Delaunay(allpoints) #triangulates all points
+    return(points, allpoints,tri)
+
+points, allpoints, tri = periodtri(x)
+
+def myneigh2(mytri,i,x): #Determines the neighbors of vertex i from Delaunay triangulation mytri
+    #x number of sites
+    a=mytri.vertex_neighbor_vertices
+    b=a[0]
+    c=a[1]
+    allneighbors=c[b[i]:b[i+1]]
+    trueneigh=np.unique(allneighbors % x)  #impliments periodic boundary
+    #each "original" vertex is repeated every x-th element in allpoints (corresponds to kx in allneighbors) 
+    return(trueneigh)
+        
+def toblue2(mytri,x): #infects all sites if at least half of the neighbor sites are infected 
+	#(why toblue?: python colored the points blue originally)
+    for i in range(x):
+        if 2*sum(color[myneigh2(mytri,i,x)]) &lt;= len(myneigh2(mytri,i,x)):
+            color[i]=1
+          
+def infecting(points,tri,color): #this function can be cleaned up significantly
+    blueness=[sum(color)] #number of sites colored
+    colorsofar=color #intializing (keeps track of coloring)
+    toblue2(tri,x) #color once
+    colorsofar=np.vstack((colorsofar,color)) 
+    blueness.append(sum(color))
+    while blueness[len(blueness)-1]&lt;blueness[len(blueness)-2]:
+        toblue2(tri,x)
+        colorsofar=np.vstack((colorsofar,color))
+        blueness.append(sum(color))
+    del blueness[-1]
+    colorsofar=colorsofar[0:(len(colorsofar)-1)]
+    return(blueness,colorsofar)
+</pre></p>
+
+<h3>Outputs Graphs of one Infection Over Time</h3>
+<p><pre class="prettyprint linenums">
+p=.3 #initial infection rate
+
+color=(bcolor&lt;p)*1 #colors the inital sites
+    
+myblueness, mycolorsofar = infecting(points,tri,color) #runs the infection
+
+def plotgrowthpoints(mypoints,colorsf,i): #plots of growth
+    first=mypoints[colorsf[i]==1]
+    plt.plot(first[:,0], first[:,1], 'o')
+    
+fig = plt.figure()
+for i in range(len(myblueness)-1):
+    plt.figure(figsize=(9,9),dpi=200)
+    plt.ylim([0,1])  #fix scale
+    plt.xlim([0,1])  #fix scale
+    plt.triplot(allpoints[:,0], allpoints[:,1], tri.simplices.copy())
+    plotgrowthpoints(points,mycolorsofar,i)
+    plt.show()</pre></p>
+    
+<h3>Proportion of Vertices Infected</h3>
+<p>Returns vector of proportions infected for range of p between zero and one.
+<pre class="prettyprint linenums">
+resolution=.01 #how much to increase p by before revaluating
+a = [1] * (np.ceil(1/resolution)+1) #initializes the final proportion to be one.
+
+for i in range(int(np.ceil(1/resolution))+1):
+    p=i/np.ceil(1/resolution)
+    if i==0:
+        color=bcolor&lt;p
+    else:
+        color=np.maximum((bcolor&lt;p)*1,colorsofar[-1])
+        #if a site becomes eventually infected for a smaller p
+        #then it will eventually become infected for a larger p (monotonic)
+    blueness, colorsofar = infecting(points,tri,color) #runs infection
+    a[i] = blueness[-1]/x #final proportion infected
+    if blueness[-1]/x==1.0: #monotonic and max is one
+        break
+print(a)
+</pre>
+</p>
+<h3>Proportion of Vertices In Giant Component</h3>
+    <p>Returns vector of proportions of vertices in the giant component for range of p between zero and one.
+<pre class="prettyprint linenums">
+import networkx as nx
+
+resolution=.01 #how much to increase p by before revaluating
+a = [1] * (np.ceil(1/resolution)+1) #initializes the final proportion to be one.
+
+adjlist=[]  #generates adjacency list for networkx
+for i in range(x):
+    b=str(myneigh2(tri,i,x))
+    b= str(i) + " " + b[1:-1]
+    adjlist.append(b)
+
+m=np.array(range(x))
+
+for i in range(int(np.ceil(1/resolution))+1):
+    p=i/np.ceil(1/resolution)
+    if i==0:
+        color=bcolor&lt;p
+    else:
+        color=np.maximum((bcolor&lt;p)*1,colorsofar[-1])
+        #if a site becomes eventually infected for a smaller p
+        #then it will eventually become infected for a larger p (monotonic)
+    blueness, colorsofar = infecting(points,tri,color) 
+    if sum(colorsofar[-1])==0: #handles empty graphs
+        a[i] = 0 
+    else:
+        G=nx.parse_adjlist(adjlist, nodetype =int)
+        G1=G
+        G1.remove_nodes_from(m[(colorsofar[-1])==0])
+        Gcc=sorted(nx.connected_component_subgraphs(G1), key = len, reverse=True) #components
+        G0=Gcc[0] #largest component
+        a[i]=G0.number_of_nodes()/x
+    if blueness[-1]/x==1.0: #monotonic and max is one
+        break    
+print(a)
+
+</pre>
+</p>
+        </section>
+      </div>
+    </div>
+
+  </div>
+
+
+
+    <!-- Footer
+    ================================================== -->
+    <footer class="footer">
+      <div class="container">
+        <p>Created by Ben Hansen.</p>
+        <p>Design based on Bootstrap.  For more information visit <a href="http://getbootstrap.com/" target="_blank"> Get Bootstrap</a>.</p>
+        <p>$\LaTeX$ rendering by <a href="http://www.mathjax.org/">MathJax</a>.</p>
+      </div>
+    </footer>
+
+
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/javascript" src="../../platform.twitter.com/widgets.js"></script>
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap-transition.js"></script>
+    <script src="assets/js/bootstrap-alert.js"></script>
+    <script src="assets/js/bootstrap-modal.js"></script>
+    <script src="assets/js/bootstrap-dropdown.js"></script>
+    <script src="assets/js/bootstrap-scrollspy.js"></script>
+    <script src="assets/js/bootstrap-tab.js"></script>
+    <script src="assets/js/bootstrap-tooltip.js"></script>
+    <script src="assets/js/bootstrap-popover.js"></script>
+    <script src="assets/js/bootstrap-button.js"></script>
+    <script src="assets/js/bootstrap-collapse.js"></script>
+    <script src="assets/js/bootstrap-carousel.js"></script>
+    <script src="assets/js/bootstrap-typeahead.js"></script>
+    <script src="assets/js/bootstrap-affix.js"></script>
+
+    <script src="assets/js/holder/holder.js"></script>
+    <script src="assets/js/google-code-prettify/prettify.js"></script>
+
+    <script src="assets/js/application.js"></script>
+
+
+    <!-- Analytics
+    ================================================== -->
+
+
+  </body>
+
+<!-- Mirrored from myweb.students.wwu.edu/hansenb7/VoronoiPercolation.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 05 Oct 2016 18:22:56 GMT -->
+</html>
