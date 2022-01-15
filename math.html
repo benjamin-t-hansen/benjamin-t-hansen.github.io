@@ -1,0 +1,386 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  
+<!-- Mirrored from myweb.students.wwu.edu/hansenb7/math.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 05 Oct 2016 18:20:22 GMT -->
+<head>
+    <meta charset="utf-8">
+<style>
+
+.link {
+  fill: none;
+  stroke: #666;
+  stroke-width: 1.5px;
+}
+
+#licensing {
+  fill: green;
+}
+
+.link.licensing {
+  stroke: green;
+}
+
+.link.resolved {
+  stroke-dasharray: 0,2 1;
+}
+
+circle {
+  fill: #ccc;
+  stroke: #333;
+  stroke-width: 1.5px;
+}
+
+text {
+  font: 10px sans-serif;
+  pointer-events: none;
+  text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, 0 -1px 0 #fff, -1px 0 0 #fff;
+}
+
+</style>
+
+
+    <title>Math</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="B.T.Hansen">
+
+    <!-- Le styles -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="assets/css/docs.css" rel="stylesheet">
+    <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="assets/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+                    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+                                   <link rel="shortcut icon" href="assets/ico/favicon.html">
+
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-42445786-1']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+
+    <!-- MathJax Latex Output-->
+    <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+</script>
+<script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+
+  </head>
+
+  <body data-spy="scroll" data-target=".bs-docs-sidebar">
+
+  <!-- Navbar
+    ================================================== -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="index.html">B.T.Hansen</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="">
+                <a href="index.html">Home</a>
+              </li>
+              <!--<li class="">
+                <a href="./mathematica.html">Mathematica</a>
+              </li>
+               <li class="">
+                <a href="./resume.html">R&eacute;sum&eacute;</a>
+              </li>  -->
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Math<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="math.html">Background</a></li>
+                  <li class="divider"></li>
+                  <li><a href="percolation.html">Percolation</a></li>
+                  <li><a href="VoronoiPercolation.html">Bootstrap Voronoi Percolation</a></li>
+      <li><a href="matching.html">Stable Matching</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Economics<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="economics.html">Main</a></li>
+                  <li class="divider"></li>
+                  <li><a href="ukraine.html">Ukraine</a></li>
+                </ul>
+              </li>
+              <li class="">
+                <a href="CV1.pdf">CV</a>
+              </li>
+              <li class="">
+                <a href="https://docs.google.com/forms/d/15SjT2ocE26EqxPREDsI_vGfgBDnnNFxeUl9m103nXXc/viewform">Comment</a>
+              </li>
+              <li class="">
+                <a href="https://www.linkedin.com/in/bhansen">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+<!-- Subhead
+================================================== -->
+<header class="jumbotron subhead" id="overview">
+  <div class="container">
+    <h2>Math</h2>
+    <p class="lead">A Study of Relationships and Structure</p>
+  </div>
+</header>
+
+
+  <div class="container">
+ <!--
+   Docs nav
+    ================================================== 
+    <div class="row">
+      <div class="span3 bs-docs-sidebar">
+        <ul class="nav nav-list bs-docs-sidenav">
+          <li><a href="#interest"><i class="icon-chevron-right"></i> Interest </a></li>
+          <li><a href="#experience"><i class="icon-chevron-right"></i> Experience and Projects </a></li>
+          <li><a href="#courses"><i class="icon-chevron-right"></i> Course History </a></li>
+        </ul>
+      </div>
+      <div class="span9"> -->
+
+
+
+        <!-- Interest
+        ================================================== -->
+        <section id="interest">
+          <div class="page-header">
+            <h2>Interest</h2>
+          </div>
+	<p>My interests are both pure and applied.  My primary interest is in probability theory.  
+	Several of my projects are probabilistic in nature, specifically those in percolation theory 
+	and information theory.   </p>	
+
+	<p>My more applied interests include statistical analysis, specifically time series and spatial models.  
+	My projects have included forecasting ozone levels, ranking college coaches, and predicting college dropouts.  
+	While working in industry, I analyzed the impact of the opening of competing stores.  </p>
+	          
+
+	     </section>
+  <section id="graph">
+          <div class="page-header">
+            <h2>Ben's Learning Graph</h2>
+
+<script src="//d3js.org/d3.v3.min.js"></script>
+<script>
+
+//"licensing" "resolved"
+var links = [
+  {source: "Real Analysis", target: "Measure Theory", type: "suit"},
+  {source: "Probability", target: "Statistics", type: "suit"},
+  {source: "Probability", target: "Measure Theory", type: "suit"},
+  {source: "Statistics", target: "Time Series Analysis", type: "suit"},
+  {source: "Time Series Analysis", target: "Singular Spectrum Analysis", type: "suit"},
+  {source: "Probability", target: "Information Theory", type: "suit"},
+  {source: "Graph Theory", target: "Percolation Theory", type: "suit"},
+  {source: "Probability", target: "Percolation Theory", type: "suit"},
+  {source: "Information Theory", target: "Coding Theory", type: "suit"},
+  {source: "Probability", target: "Coding Theory", type: "suit"},
+  {source: "Linear Algebra", target: "Coding Theory", type: "suit"},
+  {source: "Linear Algebra", target: "Functional Analysis", type: "suit"},
+  {source: "Real Analysis", target: "Fourier Analysis", type: "suit"},
+  {source: "Percolation Theory", target: "Hypercubes", type: "suit"},
+  {source: "Percolation Theory", target: "Boolean Functions", type: "suit"},
+  {source: "Hypercubes", target: "Boolean Functions", type: "suit"},
+  {source: "Fourier Analysis", target: "Boolean Functions", type: "suit"},
+  {source: "Percolation Theory", target: "Voronoi Percolation", type: "suit"},
+  {source: "Functional Analysis", target: "Boolean Functions", type: "suit"},
+  {source: "Functional Analysis", target: "Fourier Analysis", type: "suit"},
+  {source: "Graph Theory", target: "Random Graphs", type: "suit"},
+  {source: "Voronoi Percolation", target: "Geometric Graphs", type: "suit"},
+  {source: "Graph Theory", target: "Geometric Graphs", type: "suit"},
+  {source: "Coding Theory", target: "Finite Fields", type: "suit"},
+  {source: "Coding Theory", target: "Hadamard Matrix", type: "suit"},
+  {source: "Boolean Functions", target: "Hadamard Matrix", type: "suit"},
+  {source: "Algorithms", target: "Coding Theory", type: "suit"},
+  {source: "Coding Theory", target: "Reed Solomon Codes", type: "suit"},
+  {source: "Percolation Theory", target: "Bootstrap Percolation", type: "suit"},
+  {source: "Bootstrap Percolation", target: "Bootstrap Voronoi Percolation", type: "suit"},
+  {source: "Voronoi Percolation", target: "Bootstrap Voronoi Percolation", type: "suit"},
+  {source: "Econometrics", target: "Time Series Analysis", type: "suit"},
+  {source: "Real Analysis", target: "Topology", type: "suit"},
+  {source: "Statistics", target: "Mathematical Modeling", type: "suit"},
+   {source: "Information Theory", target: "Shannon Entropy", type: "suit"},
+   {source: "Coding Theory", target: "Finite Fields", type: "suit"},
+   {source: "Algorithms", target: "Dynamic Programming", type: "suit"},
+   {source: "Measure Theory", target: "Hypercubes", type: "suit"},
+   {source: "Probability", target: "Queuing Theory", type: "suit"},
+   {source: "Graph Theory", target: "Graph Coloring", type: "suit"},
+   {source: "Shannon Entropy", target: "Coding Theory", type: "suit"},
+   {source: "Real Analysis", target: "Hamming Distance", type: "suit"},
+   {source: "Hamming Distance", target: "Finite Fields", type: "suit"},
+   {source: "Linear Algebra", target: "Finite Fields", type: "suit"},
+   {source: "Linear Algebra", target: "Singular Spectrum Analysis", type: "suit"},
+   {source: "Optimization", target: "Mathematical Modeling", type: "suit"},
+   {source: "Algorithms", target: "Optimization", type: "suit"},
+   {source: "Fourier Analysis", target: "Haar Wavelet", type: "suit"},
+  {source: "Abstract Algebra", target: "Equivalence Relations", type: "suit"},
+  {source: "Abstract Algebra", target: "Finite Fields", type: "suit"},
+  {source: "Equivalence Relations", target: "Measure Theory", type: "suit"},
+  {source: "Combinatorics", target: "Discrete Geometry", type: "suit"},
+  //{source: "Algorithms", target: "Optimization", type: "suit"},
+  //{source: "Algorithms", target: "Optimization", type: "suit"},
+  //{source: "Algorithms", target: "Optimization", type: "suit"},
+];
+
+var nodes = {};
+
+// Compute the distinct nodes from the links.
+links.forEach(function(link) {
+  link.source = nodes[link.source] || (nodes[link.source] = {name: link.source});
+  link.target = nodes[link.target] || (nodes[link.target] = {name: link.target});
+});
+
+var width = 960,
+    height = 600;
+
+var force = d3.layout.force()
+    .nodes(d3.values(nodes))
+    .links(links)
+    .size([width, height])
+    .linkDistance(60)
+    .charge(-300)
+    .on("tick", tick)
+    .start();
+
+var svg = d3.select("body").append("svg")
+    .attr("width", width)
+    .attr("height", height);
+
+// Per-type markers, as they don't inherit styles.
+svg.append("defs").selectAll("marker")
+    .data(["suit", "licensing", "resolved"])
+  .enter().append("marker")
+    .attr("id", function(d) { return d; })
+    .attr("viewBox", "0 -5 10 10")
+    .attr("refX", 15)
+    .attr("refY", -1.5)
+    .attr("markerWidth", 6)
+    .attr("markerHeight", 6)
+    .attr("orient", "auto")
+  .append("path")
+    .attr("d", "M0,-5L10,0L0,5");
+
+var path = svg.append("g").selectAll("path")
+    .data(force.links())
+  .enter().append("path")
+    .attr("class", function(d) { return "link " + d.type; })
+    .attr("marker-end", function(d) { return "url(#" + d.type + ")"; });
+
+var circle = svg.append("g").selectAll("circle")
+    .data(force.nodes())
+  .enter().append("circle")
+    .attr("r", 6)
+    .call(force.drag);
+
+var text = svg.append("g").selectAll("text")
+    .data(force.nodes())
+  .enter().append("text")
+    .attr("x", 8)
+    .attr("y", ".31em")
+    .text(function(d) { return d.name; });
+
+// Use elliptical arc path segments to doubly-encode directionality.
+function tick() {
+  path.attr("d", linkArc);
+  circle.attr("transform", transform);
+  text.attr("transform", transform);
+}
+
+function linkArc(d) {
+  var dx = d.target.x - d.source.x,
+      dy = d.target.y - d.source.y,
+      dr = Math.sqrt(dx * dx + dy * dy);
+  return "M" + d.source.x + "," + d.source.y + "A" + dr + "," + dr + " 0 0,1 " + d.target.x + "," + d.target.y;
+}
+
+function transform(d) {
+  return "translate(" + d.x + "," + d.y + ")";
+}
+
+</script>
+
+        </section>  
+        </section>
+
+
+
+
+
+      </div>
+    </div>
+
+  </div>
+
+
+
+    <!-- Footer
+    ================================================== -->
+    <footer class="footer">
+      <div class="container">
+        <p>Created by Ben Hansen.</p>
+        <p>Design based on Bootstrap.  For more information visit <a href="http://getbootstrap.com/" target="_blank"> Get Bootstrap</a>.</p>
+        <p>$\LaTeX$ rendering by <a href="http://www.mathjax.org/">MathJax</a>.</p>
+      </div>
+    </footer>
+
+
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/javascript" src="../../platform.twitter.com/widgets.js"></script>
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap-transition.js"></script>
+    <script src="assets/js/bootstrap-alert.js"></script>
+    <script src="assets/js/bootstrap-modal.js"></script>
+    <script src="assets/js/bootstrap-dropdown.js"></script>
+    <script src="assets/js/bootstrap-scrollspy.js"></script>
+    <script src="assets/js/bootstrap-tab.js"></script>
+    <script src="assets/js/bootstrap-tooltip.js"></script>
+    <script src="assets/js/bootstrap-popover.js"></script>
+    <script src="assets/js/bootstrap-button.js"></script>
+    <script src="assets/js/bootstrap-collapse.js"></script>
+    <script src="assets/js/bootstrap-carousel.js"></script>
+    <script src="assets/js/bootstrap-typeahead.js"></script>
+    <script src="assets/js/bootstrap-affix.js"></script>
+
+    <script src="assets/js/holder/holder.js"></script>
+    <script src="assets/js/google-code-prettify/prettify.js"></script>
+
+    <script src="assets/js/application.js"></script>
+
+
+    <!-- Analytics
+    ================================================== -->
+
+
+  </body>
+
+<!-- Mirrored from myweb.students.wwu.edu/hansenb7/math.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 05 Oct 2016 18:20:22 GMT -->
+</html>
