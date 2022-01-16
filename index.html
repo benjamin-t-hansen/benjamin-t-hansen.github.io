@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
   
-<!-- Mirrored from myweb.students.wwu.edu/hansenb7/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 05 Oct 2016 18:20:07 GMT -->
 <head>
     <meta charset="utf-8">
     <title>Home</title>
@@ -9,11 +8,15 @@
     <meta name="description" content="">
     <meta name="author" content="B.T.Hansen">
 
-    <!-- Le styles -->
+    <!-- The styles -->
     <link href="assets/css/bootstrap.css" rel="stylesheet">
     <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
     <link href="assets/css/docs.css" rel="stylesheet">
     <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+
+    <!--  To load header and footer-->
+    <script     src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -46,6 +49,9 @@ MathJax.Hub.Config({
 </script>
 <script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
 
+
+
+
   </head>
 
   <body data-spy="scroll" data-target=".bs-docs-sidebar">
@@ -53,59 +59,20 @@ MathJax.Hub.Config({
   
     <!-- Navbar
     ================================================== -->
-    <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
-          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="brand" href="index.html">B.T.Hansen</a>
-          <div class="nav-collapse collapse">
-            <ul class="nav">
-              <li class="">
-                <a href="index.html">Home</a>
-              </li>
-              <!--<li class="">
-                <a href="./mathematica.html">Mathematica</a>
-              </li>
-               <li class="">
-                <a href="./resume.html">R&eacute;sum&eacute;</a>
-              </li>  -->
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Math<b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                  <li><a href="math.html">Background</a></li>
-                  <li class="divider"></li>
-                  <li><a href="percolation.html">Percolation</a></li>
-                  <li><a href="VoronoiPercolation.html">Bootstrap Voronoi Percolation</a></li>
-      <li><a href="matching.html">Stable Matching</a></li>
-                </ul>
-              </li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Economics<b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                  <li><a href="economics.html">Main</a></li>
-                  <li class="divider"></li>
-                  <li><a href="ukraine.html">Ukraine</a></li>
-                </ul>
-              </li>
-              <li class="">
-                <a href="CV1.pdf">CV</a>
-              </li>
-              <li class="">
-                <a href="https://docs.google.com/forms/d/15SjT2ocE26EqxPREDsI_vGfgBDnnNFxeUl9m103nXXc/viewform">Comment</a>
-              </li>
-              <li class="">
-                <a href="https://www.linkedin.com/in/bhansen">LinkedIn</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
 
+    <div id="nav-placeholder">
+
+   </div>
+
+    <script>
+    $(function(){
+        $("#nav-placeholder").load("nav.html");
+    });
+    </script>
+<!--end of Navigation bar-->
+
+
+    
 
 <!-- Subhead
 ================================================== -->
