@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+    <meta charset="utf-8">
+    <title>Hyperbolic Percolation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="B.T.Hansen">
+
+    <!-- The styles -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="assets/css/docs.css" rel="stylesheet">
+    <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+
+    <!--  To load header and footer-->
+    <script     src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+
+
+
+    <!-- The fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+                    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+                                   <link rel="shortcut icon" href="assets/ico/favicon.html">
+
+
+    
+    <!-- MathJax Latex Output-->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+      });
+  </script>
+  <script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+
+
+
+
+  </head>
+
+  <body data-spy="scroll" data-target=".bs-docs-sidebar">
+
+  
+       <!-- Navbar
+    ================================================== -->
+    <div class="navbar navbar-inverse navbar-fixed-top" id="nav-placeholder">
+
+   </div>
+
+    <script>
+    $(function(){
+        $("#nav-placeholder").load("nav.html");
+    });
+    </script>
+<!--end of Navigation bar-->
+
+
+    
+
+<!-- Subhead
+================================================== -->
+<header class="jumbotron subhead" id="overview">
+  <div class="container">
+    <h2>Benjamin T. Hansen</h2>
+    <p class="lead">Data Scientist | Math PhD </p>
+  </div>
+</header>
+
+
+  <div class="container">
+
+    <!-- Docs nav
+    ================================================== -->
+    <div class="row">
+  
+      <div class="span9">
+
+
+
+        <!-- Hyperbolic Percolation
+        ================================================== -->
+        <section id="hyperbolic_percolation">
+        <h2>Hyperbolic Percolation </h2>
+        <p class="lead"> We place points as "randomly as possible" in the hyperbolic plane. Let crystal cells grow from each point until they run into another cell, we color the cells with probability $p$ and ask the question, is it possible to walk forever using only the colored cells?  This formulation is quite vague.   However, all else equal, if we increase  $p$, then it isn't any harder to walk forever. It turns out there is a critical probability $p_c$, so that when $p> p_c,$ we have a positive probability of being able to walk forever, but if $p< p_c,$ almost surely we cannot walk forever. Imagine we have a parameter $\lambda$ that controls the average density of the points within distance one of the origin.  Bollob&aacute;s and Riordan showed that if we were working in the Euclidean plane, rather than the hyperbolic plane, $p_c = 1/2$ regardless of the choice of $\lambda.$
+        <div class="row-fluid">
+          <div class="span4">
+            <img src="img/hyperbolic_main.png" width=100%>
+          </div>
+          <div class="span8"><p class="lead"><a href="hyperbolic_percolation.html">Hyperbolic Percolation</a></p>
+          <p class="lead">We place points as "randomly as possible" in the hyperbolic plane. Let crystal cells grow from each point until they run into another cell, we color the cells with probability $p$ and ask the question, is it possible to walk forever using only the colored cells?</p>
+          </div>
+        </div>
+      </br>
+
+        <div class="row-fluid">
+          <div class="span4">
+            <img src="img/100x100_main.png" width=100%>
+          </div>
+          <div class="span8"><p class="lead"><a href="square_lattice_percolation.html">Square Lattice Percolation</a></p>
+          <p class="lead">We keep edges of an infinite piece of gridpaper with probability $p$, is it possible to walk forever using only those edges?</p>
+          </div>
+        </div>
+        </br>        
+         
+
+        <div class="row-fluid">
+          <div class="span4">
+            <img src="img/ozone_main.png" width=100%>
+          </div>
+          <div class="span8"><p class="lead"><a href="ssa_vol.html">Singular Spectrum Analysis: Seasonal Volatility</a></p>
+          <p class="lead">Applying the ideas of singular value decomposition to time series to account for seasonal volatility.</p>
+          </div>
+        </div> 
+
+
+
+
+
+
+
+
+        </section>
+
+
+
+
+
+      </div>
+    </div>
+
+  </div>
+
+
+
+    <!-- Footer
+    ================================================== -->
+    <footer class="footer">
+      <div class="container">
+      <p>Created by Benjamin Hansen.</p>
+      </div>
+    </footer>
+
+
+    <!--  Javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/javascript" src="../../platform.twitter.com/widgets.js"></script>
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap-transition.js"></script>
+    <script src="assets/js/bootstrap-alert.js"></script>
+    <script src="assets/js/bootstrap-modal.js"></script>
+    <script src="assets/js/bootstrap-dropdown.js"></script>
+    <script src="assets/js/bootstrap-scrollspy.js"></script>
+    <script src="assets/js/bootstrap-tab.js"></script>
+    <script src="assets/js/bootstrap-tooltip.js"></script>
+    <script src="assets/js/bootstrap-popover.js"></script>
+    <script src="assets/js/bootstrap-button.js"></script>
+    <script src="assets/js/bootstrap-collapse.js"></script>
+    <script src="assets/js/bootstrap-carousel.js"></script>
+    <script src="assets/js/bootstrap-typeahead.js"></script>
+    <script src="assets/js/bootstrap-affix.js"></script>
+
+    <script src="assets/js/holder/holder.js"></script>
+    <script src="assets/js/google-code-prettify/prettify.js"></script>
+
+    <script src="assets/js/application.js"></script>
+
+
+    <!-- Analytics
+    ================================================== -->
+        <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-42445786-1']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+
+  </body>
+
+</html>
