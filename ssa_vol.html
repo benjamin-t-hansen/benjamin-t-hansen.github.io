@@ -3,7 +3,7 @@
   
 <head>
     <meta charset="utf-8">
-    <title>Hyperbolic Percolation</title>
+    <title>Singular Spectrum Analysis: Seasonal Volatility</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="B.T.Hansen">
@@ -65,7 +65,7 @@
 ================================================== -->
 <header class="jumbotron subhead" id="overview">
   <div class="container">
-    <h2>Hyperbolic Percolation</h2>
+    <h2>Singular Spectrum Analysis: Seasonal Volatility/h2>
   </div>
 </header>
 
@@ -73,49 +73,19 @@
   <div class="container">
 
 
-
-
-
-        <!-- Hyperbolic Percolation
+        <!-- Singular Spectrum Analysis
         ================================================== -->
-        <section id="hyperbolic_percolation">
+        <section id="ssa">
 
         <div class="row-fluid">
           <div class="span5">
-            <img src="img/halfplane_mid_intensity.png" width=100%>
+            <img src="img/ozone_main.png" width=100%>
           </div>
-          <div class="span7"><p class="lead"> We place points as "randomly as possible" in the hyperbolic plane. Let crystal cells grow from each point until they run into another cell, we color the cells with probability $p$ and ask the question, is it possible to walk forever using only the colored cells?  This formulation is quite vague.   However, all else equal, if we increase  $p$, then it isn't any harder to walk forever. It turns out there is a critical probability $p_c$, so that when $p> p_c,$ we have a positive probability of being able to walk forever, but if $p< p_c,$ almost surely we cannot walk forever. Imagine we have a parameter $\lambda$ that controls the average density of the points within distance one of the origin.  Bollob&aacute;s and Riordan showed that if we were working in the Euclidean plane, rather than the hyperbolic plane, $p_c = 1/2$ regardless of the choice of $\lambda.$  Benjamini and Schramm showed that in the hyperbolic plane $p_c$ is a function of $\lambda$ and provided some bounds.  The following is joint work with my PhD supervisor <a href="http://www.math.rug.nl/~tobias/">Tobias M&uuml;ller</a>.
-          </div>
-        </div>
-        </br>
+          <div class="span7"><p class="lead"><a href="https://arxiv.org/pdf/2004.01464.pdf">Improved short-term point and interval forecasts of the daily maximum tropospheric ozone levels via singular spectrum analysis</a>
+            We apply the ideas of singular value decomposition to time series to account for seasonal volatility. We propose a general method for producing reliable short-term point and interval forecasts of daily maximum tropospheric ozone concentrations, a time series with a significant seasonal component and correlated errors in both mean and volatility. Our method combines symmetrizing data transformation and time series modeling techniques called the singular spectrum analysis and autoregressive models. 
 
-        <div class="row-fluid">
-          <div class="span5">
-            <img src="img/halfplane_high_intensity.png" width=100%>
           </div>
-          <div class="span7"><p class="lead"><a href="https://arxiv.org/pdf/2004.01464.pdf">The critical probability for Voronoi percolation in the hyperbolic plane tends to $1/2$</a></p>
-          <p class="lead"> Some intuition as to why one might expect that the large $\lambda$ limit of the critical value in the hyperbolic plane might coincide with the critical value in the Euclidean plane is given by the following observation. As we “zoom in” around any given point on the hyperbolic plane, the geometry starts to look more and more like the geometry of the Euclidean plane; and as the intensity $\lambda \to \infty$ the points of the Poisson process get packed closer and closer together. In other words, as $\lambda \to \infty$ , it becomes increasingly difficult to distinguish the “local picture” from ordinary, Euclidean Voronoi percolation. Of course the same is not necessarily true for global characteristics of the model so some other ideas are needed. This result confirms a conjecture of Benjamini and Schramm.</p>
-          </div>
-        </div>
-        </br>
-
-        <div class="row-fluid">
-          <div class="span5">
-            <img src="img/halfplane_low_intensity.png" width=100%>
-          </div>
-          <div class="span7"><p class="lead"><a href="https://arxiv.org/pdf/2111.04299.pdf">Poisson-Voronoi percolation in the hyperbolic plane with small intensities</a></p>
-          <p class="lead">We show that the critical probability for the existence of an infinite cluster is asymptotically equal to $\pi \lambda/3$ as $\lambda \to 0$. This answers a question of Benjamini and Schramm.  The graphic shows that the number of neighbors becomes large when $\lambda$ is small.</p>
-          </div>
-        </div>
-        </br>        
-      
-        <div class="row-fluid">
-          <div class="span12">
-            <p class="lead">  My thesis can be viewed <a href="https://arxiv.org/pdf/2111.04299.pdf"> here</a>.  (Some of the chapters are embargoed until the contents appear in print)
-          </div>
-        </div>
-
-
+        
 
 
 
@@ -127,6 +97,7 @@
 
 
   </div>
+
 
 
 
