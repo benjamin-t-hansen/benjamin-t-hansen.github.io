@@ -281,16 +281,18 @@ function transform(d) {
   </div>
 
 
-
     <!-- Footer
     ================================================== -->
-    <footer class="footer">
-      <div class="container">
-        <p>Created by Ben Hansen.</p>
-        <p>Design based on Bootstrap.  For more information visit <a href="http://getbootstrap.com/" target="_blank"> Get Bootstrap</a>.</p>
-        <p>$\LaTeX$ rendering by <a href="http://www.mathjax.org/">MathJax</a>.</p>
-      </div>
-    </footer>
+    <footer class="footer" id="footer-placeholder">
+
+   </footer>
+
+    <script>
+    $(function(){
+        $("#footer-placeholder").load("footer.html");
+    });
+    </script>
+
 
 
 
