@@ -1,151 +1,68 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
   
-<!-- Mirrored from myweb.students.wwu.edu/hansenb7/math.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 05 Oct 2016 18:20:22 GMT -->
 <head>
     <meta charset="utf-8">
-<style>
-
-.link {
-  fill: none;
-  stroke: #666;
-  stroke-width: 1.5px;
-}
-
-#licensing {
-  fill: green;
-}
-
-.link.licensing {
-  stroke: green;
-}
-
-.link.resolved {
-  stroke-dasharray: 0,2 1;
-}
-
-circle {
-  fill: #ccc;
-  stroke: #333;
-  stroke-width: 1.5px;
-}
-
-text {
-  font: 10px sans-serif;
-  pointer-events: none;
-  text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, 0 -1px 0 #fff, -1px 0 0 #fff;
-}
-
-</style>
-
-
-    <title>Math</title>
+    <title>Visualizations</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="B.T.Hansen">
 
-    <!-- Le styles -->
+    <!-- The styles -->
     <link href="assets/css/bootstrap.css" rel="stylesheet">
     <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
     <link href="assets/css/docs.css" rel="stylesheet">
     <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
 
-    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="assets/js/html5shiv.js"></script>
-    <![endif]-->
+    <!--  To load header and footer-->
+    <script     src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
-    <!-- Le fav and touch icons -->
+
+
+
+    <!-- The fav and touch icons -->
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
       <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
                     <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
                                    <link rel="shortcut icon" href="assets/ico/favicon.html">
 
-    <script type="text/javascript">
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-42445786-1']);
-      _gaq.push(['_trackPageview']);
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
-    </script>
 
+    
     <!-- MathJax Latex Output-->
     <script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
-});
-</script>
-<script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+      MathJax.Hub.Config({
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+      });
+  </script>
+  <script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+
+
+
 
   </head>
 
   <body data-spy="scroll" data-target=".bs-docs-sidebar">
 
-  <!-- Navbar
+  
+       <!-- Navbar
     ================================================== -->
-    <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
-          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="brand" href="index.html">B.T.Hansen</a>
-          <div class="nav-collapse collapse">
-            <ul class="nav">
-              <li class="">
-                <a href="index.html">Home</a>
-              </li>
-              <!--<li class="">
-                <a href="./mathematica.html">Mathematica</a>
-              </li>
-               <li class="">
-                <a href="./resume.html">R&eacute;sum&eacute;</a>
-              </li>  -->
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Math<b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                  <li><a href="math.html">Background</a></li>
-                  <li class="divider"></li>
-                  <li><a href="percolation.html">Percolation</a></li>
-                  <li><a href="VoronoiPercolation.html">Bootstrap Voronoi Percolation</a></li>
-      <li><a href="matching.html">Stable Matching</a></li>
-                </ul>
-              </li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Economics<b class="caret"></b></a>
-                <ul class="dropdown-menu">
-                  <li><a href="economics.html">Main</a></li>
-                  <li class="divider"></li>
-                  <li><a href="ukraine.html">Ukraine</a></li>
-                </ul>
-              </li>
-              <li class="">
-                <a href="CV1.pdf">CV</a>
-              </li>
-              <li class="">
-                <a href="https://docs.google.com/forms/d/15SjT2ocE26EqxPREDsI_vGfgBDnnNFxeUl9m103nXXc/viewform">Comment</a>
-              </li>
-              <li class="">
-                <a href="https://www.linkedin.com/in/bhansen">LinkedIn</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-    
+    <div class="navbar navbar-inverse navbar-fixed-top" id="nav-placeholder">
+
+   </div>
+
+    <script>
+    $(function(){
+        $("#nav-placeholder").load("nav.html");
+    });
+    </script>
+<!--end of Navigation bar-->
+
 <!-- Subhead
 ================================================== -->
 <header class="jumbotron subhead" id="overview">
   <div class="container">
-    <h2>Math</h2>
-    <p class="lead">A Study of Relationships and Structure</p>
+    <h2>Visualizations</h2>
   </div>
 </header>
 
@@ -170,21 +87,15 @@ MathJax.Hub.Config({
         ================================================== -->
         <section id="interest">
           <div class="page-header">
-            <h2>Interest</h2>
+            <h2>Visualizations</h2>
           </div>
-	<p>My interests are both pure and applied.  My primary interest is in probability theory.  
-	Several of my projects are probabilistic in nature, specifically those in percolation theory 
-	and information theory.   </p>	
 
-	<p>My more applied interests include statistical analysis, specifically time series and spatial models.  
-	My projects have included forecasting ozone levels, ranking college coaches, and predicting college dropouts.  
-	While working in industry, I analyzed the impact of the opening of competing stores.  </p>
 	          
 
 	     </section>
   <section id="graph">
           <div class="page-header">
-            <h2>Ben's Learning Graph</h2>
+            <h2>My Learning Graph</h2>
 
 <script src="//d3js.org/d3.v3.min.js"></script>
 <script>
