@@ -1,0 +1,1 @@
+<ErrorResponse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Success>false</Success><Code>1001</Code><Message>Error processing payment (100)</Message></ErrorResponse>
