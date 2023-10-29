@@ -15,7 +15,7 @@
   var viewer = new Cesium.Viewer('cesiumContainer');
 
         // Load GeoJSON data
-    Cesium.GeoJsonDataSource.load('Tribal_Lands_in_King_County___tribal_lands_area.geojson').then(function(dataSource) {
+    Cesium.GeoJsonDataSource.load('https://gisdata.kingcounty.gov/arcgis/rest/services/OpenDataPortal/property__parcel_area/FeatureServer/439/query?outFields=*&where=1%3D1&f=geojson').then(function(dataSource) {
     viewer.dataSources.add(dataSource);
 
     // Customize styling and extrude polygons based on height attribute
