@@ -15,7 +15,7 @@
   var viewer = new Cesium.Viewer('cesiumContainer');
 
         // Load GeoJSON data
-    Cesium.GeoJsonDataSource.load('yp.json').then(function(dataSource) {
+    Cesium.GeoJsonDataSource.load('yp.geojson').then(function(dataSource) {
     viewer.dataSources.add(dataSource);
 
     // Customize styling and extrude polygons based on height attribute
