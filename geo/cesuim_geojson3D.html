@@ -22,7 +22,7 @@
     var entities = dataSource.entities.values;
     for (var i = 0; i < entities.length; i++) {
         var entity = entities[i];
-        var height = 1000; // Replace 'your_height_attribute' with your attribute name
+        var height = entity.properties.APPRLNDVAL_per_acre; // Replace 'your_height_attribute' with your attribute name
         entity.polygon.extrudedHeight = height;
     }
             // Zoom to the added data
