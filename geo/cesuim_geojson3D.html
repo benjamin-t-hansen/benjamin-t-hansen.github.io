@@ -22,7 +22,7 @@
     var entities = dataSource.entities.values;
     for (var i = 0; i < entities.length; i++) {
         var entity = entities[i];
-        var color = Cesium.Color.fromHsl(0.5 - (height ), 1.0, 0.5);
+        var color = Cesium.Color.fromHsl(height/0.007395363126588423 ), 1.0, 0.5);
         entity.polygon.material = color;
 
         var height = entity.properties.APPRLNDVAL_per_acre; // Replace 'your_height_attribute' with your attribute name
@@ -31,6 +31,8 @@
 
         // Decrease opacity
         entity.polygon.material = new Cesium.ColorMaterialProperty(Cesium.Color.fromAlpha(color, 0.7));
+        entity.polygon.outlineColor = new Cesium.ConstantProperty(Cesium.Color.TRANSPARENT);
+        entity.polygon.outlineWidth = new Cesium.ConstantProperty(0);
     }
             // Zoom to the added data
     viewer.zoomTo(dataSource);
