@@ -22,13 +22,11 @@
     var entities = dataSource.entities.values;
     for (var i = 0; i < entities.length; i++) {
         var entity = entities[i];
-        entity.polygon.material = color;
 
-        var height = entity.properties.APPRLNDVAL_per_acre; // Replace 'your_height_attribute' with 
-        var color = Cesium.Color.fromHsl(height/0.007395363126588423 , 1.0, 0.5);
-        
-        your attribute name
+        var height = entity.properties.APPRLNDVAL_per_acre; // Replace 'your_height_attribute' with your attribute name
         entity.polygon.extrudedHeight = height *100000;
+        var color = Cesium.Color.fromHsl(height/0.007395363126588423 , 1.0, 0.5);
+        entity.polygon.material = color;
 
 
         // Decrease opacity
