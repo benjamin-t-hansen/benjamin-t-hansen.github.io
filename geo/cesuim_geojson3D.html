@@ -15,7 +15,7 @@
   var viewer = new Cesium.Viewer('cesiumContainer');
 
         // Load GeoJSON data
-    Cesium.GeoJsonDataSource.load('yp.geojson').then(function(dataSource) {
+    Cesium.GeoJsonDataSource.load('bellevue.geojson').then(function(dataSource) {
     viewer.dataSources.add(dataSource);
 
     // Customize styling and extrude polygons based on height attribute
@@ -25,7 +25,7 @@
 
         var height = entity.properties.APPRLNDVAL_per_acre; // Replace 'your_height_attribute' with your attribute name
         entity.polygon.extrudedHeight = height *100000;
-        var color = Cesium.Color.fromHsl(height/0.014 , 1.0, 1);
+        var color = Cesium.Color.fromHsl(height/0.007 , 1.0, 1);
         
         //var color = Cesium.Color.fromHsl(height/0.007395363126588423 , 1.0, 1);
         entity.polygon.material = color;
