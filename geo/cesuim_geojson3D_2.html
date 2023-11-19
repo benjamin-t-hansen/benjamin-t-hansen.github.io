@@ -41,10 +41,8 @@
 
            
 
-}
-
-       // Load GeoJSON data
-    Cesium.GeoJsonDataSource.load('bellevue.geojson').then(function(dataSource) {
+});
+      Cesium.GeoJsonDataSource.load('bellevue.geojson').then(function(dataSource) {
     viewer.dataSources.add(dataSource);
      // Zoom to the added data
     // Customize styling and extrude polygons based on height attribute
@@ -64,17 +62,12 @@
         entity.polygon.outlineColor = new Cesium.ConstantProperty(Cesium.Color.TRANSPARENT);
         entity.polygon.outlineWidth = new Cesium.ConstantProperty(0);
     }
-    viewer.zoomTo(dataSource);
 
 
 
            
 
-}
-
-
-
-);
+});
 </script>
  </div>
 </body>
