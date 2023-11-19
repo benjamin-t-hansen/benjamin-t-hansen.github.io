@@ -52,7 +52,7 @@
 
         var height = entity.properties.APPRLNDVAL_per_acre; // Replace 'your_height_attribute' with your attribute name
         entity.polygon.extrudedHeight = height *100000;
-        var color = Cesium.Color.fromHsl(height/0.01 , 1.0, .3);
+        var color = Cesium.Color.fromHsl(height/0.03 , 1.0, .3);
         
         entity.polygon.material = color;
 
