@@ -15,7 +15,7 @@
   var viewer = new Cesium.Viewer('cesiumContainer');
 
         // Load GeoJSON data
-    Cesium.GeoJsonDataSource.load('bellevue.geojson').then(function(dataSource) {
+    Cesium.GeoJsonDataSource.load('yp.geojson').then(function(dataSource) {
     viewer.dataSources.add(dataSource);
      // Zoom to the added data
     viewer.zoomTo(dataSource);
